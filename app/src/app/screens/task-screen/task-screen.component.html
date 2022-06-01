@@ -7,22 +7,14 @@
                     <h3 class="fw-bold">Task List</h3>
                 </div>
                 <div class="col-6">
-                    <button type="button" class="btn btn-success float-end">New Task List</button>
+                    <button type="button" class="btn btn-success" style="float:right">New Task List</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
                     <ul class="list-group">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                          A list item
-                          <span class="badge bg-danger rounded-pill">x</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                          A second list item
-                          <span class="badge bg-danger rounded-pill">x</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                          A third list item
+                        <li *ngFor="let item of taskLists" class="list-group-item d-flex justify-content-between align-items-center">
+                          {{ item.title }}
                           <span class="badge bg-danger rounded-pill">x</span>
                         </li>
                       </ul>
@@ -32,26 +24,18 @@
         </div>
         <div class="col-8">
             <div class="row">
-                <div class="col-6 border">
-                    <h3 class="fw-bold">Linked Tasks</h3>
+                <div class="col-6 ">
+                    <h3 class="fw-bold float-start" >Linked Tasks</h3>
                 </div>
-                <div class="col-6 border">
-                    <button type="button" class="btn btn-success">New Tasks</button>
+                <div class="col-6 ">
+                    <button type="button" class="btn btn-success" style="float:right">New Tasks</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12">
                     <ul class="list-group">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                          A list item
-                          <span class="badge bg-danger rounded-pill">x</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                          A second list item
-                          <span class="badge bg-danger rounded-pill">x</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                          A third list item
+                        <li *ngFor="let item of tasks"class="list-group-item d-flex justify-content-between align-items-center">
+                          {{ item.title }}
                           <span class="badge bg-danger rounded-pill">x</span>
                         </li>
                       </ul>
