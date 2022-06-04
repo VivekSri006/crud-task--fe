@@ -24,4 +24,5 @@ export class ApiConfigService {
   delete(url:string){
     return this.httpClient.delete(`${this.API_BASE_URL}/${url}`)
   }
+  
 }
