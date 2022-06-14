@@ -8,6 +8,7 @@ export class ApiConfigService {
   API_BASE_URL='http://localhost:3000'
   constructor(private httpClient: HttpClient) { }
 
+  
   //get API call to Backend
   get(url : string){
     return this.httpClient.get(`${this.API_BASE_URL}/${url}`)
